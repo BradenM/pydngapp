@@ -14,5 +14,6 @@ isort = "*"
 zerorpc = "*"
 gevent = "*"
 greenlet = "*"
-pydngconverter = "*"
+pydngconverter = {editable = true,path = "/home/bradenmars/projects/pydngconverter/pydng-interface"}
 ray = "*"
+psutil = "*"

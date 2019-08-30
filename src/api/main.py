@@ -20,22 +20,8 @@ class PyDNGApi:
     def convert(self, source, dest):
         pydng = DNGConverter(
             source, dest=dest, multiprocess=True, fast_load=True, linear=True)
-        img_ids = pydng.convert()
-        completed = set()
-        num_cpus = ray.available_resources().get('CPU', 8)
-        print(num_cpus)
-        while True:
-            ready_ids, remaining_ids = ray.wait(
-                img_ids, num_returns=(num_cpus + len(completed)))
-            print("REMAINING: ", len(remaining_ids))
-            for _i in ready_ids:
-                if _i not in completed:
-                    yield ray.get(_i)
-                completed.add(_i)
-            if len(remaining_ids) == 0:
-                print("DONE!")
-                print(completed)
-                break
+        for converted in pydng.convert():
+            yield converted
 
 
 def main():
