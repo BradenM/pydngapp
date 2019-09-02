@@ -2,12 +2,16 @@
 
 """Python Backend for PyDNGConverter GUI"""
 
+import sys
 from pathlib import Path
 
-import ray
-import zerorpc
+pkgs = Path(__file__).parent / '.venv' / 'lib' / 'python3.7' / 'site-packages'
 
-from pydngconverter import DNGConverter
+sys.path.insert(0, str(pkgs))
+
+import ray  # noqa
+import zerorpc  # noqa
+from pydngconverter import DNGConverter  # noqa
 
 
 class PyDNGApi:
