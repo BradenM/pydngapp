@@ -62,25 +62,39 @@
     }
   },
   "dependencies": {
+    "bootstrap": "^4.3.1",
     "electron-squirrel-startup": "^1.0.0",
     "react": "^16.9.0",
+    "react-bootstrap": "^1.0.0-beta.12",
     "react-dom": "^16.9.0",
     "zerorpc": "git+https://github.com/fyears/zerorpc-node.git"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/preset-react": "^7.0.0",
+    "@babel/cli": "^7.0.0-beta.40",
+    "@babel/core": "^7.0.0-beta.40",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0-beta.0",
     "@electron-forge/cli": "6.0.0-beta.44",
     "@electron-forge/maker-deb": "6.0.0-beta.44",
     "@electron-forge/maker-rpm": "6.0.0-beta.44",
     "@electron-forge/maker-squirrel": "6.0.0-beta.44",
     "@electron-forge/maker-zip": "6.0.0-beta.44",
     "@electron-forge/plugin-webpack": "^6.0.0-beta.44",
-    "babel-loader": "^8.0.6",
+    "@marshallofsound/webpack-asset-relocator-loader": "^0.5.0",
+    "babel-loader": "^8.0.0-beta.0",
+    "babel-plugin-import": "^1.12.1",
     "copy-webpack-plugin": "^5.0.4",
+    "css-loader": "^3.2.0",
     "electron": "6.0.5",
     "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^3.2.0",
     "node-loader": "^0.6.0",
-    "py-loader": "^0.3.1"
+    "style-loader": "^1.0.0",
+    "url-loader": "^2.1.0",
+    "webpack": "^4.33.0",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.7.0"
   }
 }

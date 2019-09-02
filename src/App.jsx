@@ -1,4 +1,7 @@
 import React from 'react';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 import { Store } from './Store';
 
 const zerorpc = require('zerorpc');
@@ -51,34 +54,19 @@ export default function App() {
   return (
     <React.Fragment>
       {console.log(state)}
-      <div>
-        <h1>PyDNGConverter</h1>
-        <p>Convert some files</p>
-        <div>
-          <p>Path to Raw Images: {state.paths.raw}</p>
-          <input
-            onClick={() => selectPathAction('RAW')}
-            type="button"
-            value="Select Path"
-            id="raw_path"
-            name="raw_path"
-          />
-        </div>
-        <div>
-          <p>Destination: {state.paths.dest}</p>
-          <input
-            onClick={() => selectPathAction('DEST')}
-            type="button"
-            value="Select Path"
-            id="dest_path"
-            name="dest_path"
-          />
-        </div>
-        <button onClick={() => convertRawAction()}>Convert</button>
-        {state.converted.map(path => {
-          return <p>{path}</p>;
-        })}
-      </div>
+      <Container fluid className="h-100" style={{ minHeight: '100%' }}>
+        <Row className="h-100 justify-content-center">
+          <Col
+            xs={9}
+            className="text-center d-flex flex-column justify-content-around"
+            style={{ height: '100%' }}
+          >
+            <h1>PyDNG Converter</h1>
+            <p>Middle Content</p>
+            <p>End Content</p>
+          </Col>
+        </Row>
+      </Container>
     </React.Fragment>
   );
 }
